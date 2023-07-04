@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Search Engine</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* 在这里添加CSS样式 */
+    </style>
+</head>
+<body>
+<h1>News Search Engine</h1>
+<input type="text" id="search-input" placeholder="Search...">
+<button id="search-button">Search</button>
+<div id="results"></div>
+
+<script>
+    // 使用jQuery处理用户输入和API调用
+    $("#search-button").click(function() {
+        const query = $("#search-input").val();
+        $.get("/search", {query: query}, function(data) {
+            data.headline_text = undefined;
+            let results = "";
+            for (const i in data.headline_text) {
+                results += "<p>" + data.headline_text[i] + "</p>";
+            }
+            $("#results").html(results);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "ml_backend",
+  "version": "1.0.0",
+  "dependencies": {
+    "apexcharts": "^3.40.0"
+  }
+}

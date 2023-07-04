@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <title>ZHU Project</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+<div class="grid-container">
+
+
+  <header class="header">
+
+    <div class="header-left">
+      <span class="material-icons-outlined">search</span>
+      <label for="search-input"></label><input type="text" class="form-control" id="search-input" placeholder="Search...">
+    </div>
+    <div class="header-right">
+      <button class="btn btn-primary" id="search-button">Search</button>
+
+    </div>
+  </header>
+
+  <main class="main-container">
+    <div class="main-title">
+      <p class="font-weight-bold" id="headText">The four most similar topics</p>
+    </div>
+
+    <div class="main-cards">
+
+      <div class="card">
+        <div class="card-inner">
+          <p class="text-primary" id="text1">Topic1</p>
+          <div id="donut-chart1"></div>
+
+        </div>
+        <span class="text-primary font-weight-bold"></span>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <p class="text-primary" id="text2">Topic2</p>
+          <div id="donut-chart2"></div>
+
+        </div>
+        <span class="text-primary font-weight-bold"></span>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <p class="text-primary" id="text3">Topic3</p>
+          <div id="donut-chart3"></div>
+
+        </div>
+        <span class="text-primary font-weight-bold"></span>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <p class="text-primary" id="text4">Topic4</p>
+          <div id="donut-chart4"></div>
+        </div>
+        <span class="text-primary font-weight-bold"></span>
+      </div>
+
+    </div>
+
+    <div class="charts">
+
+      <div class="charts-card" id="tableCard">
+          <table class="table table-striped" id="dataTable">
+              <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Topic</th>
+                <th>Score</th>
+              </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+      </div>
+      <div class="charts-card" id="imageCard">
+        <div id="imageContainer"></div>
+      </div>
+
+
+    </div>
+
+  </main>
+
+
+</div>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
